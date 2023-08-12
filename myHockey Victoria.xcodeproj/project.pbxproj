@@ -11,6 +11,10 @@
 		AFC33C562A873981003AC0B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C552A873981003AC0B3 /* ContentView.swift */; };
 		AFC33C582A873981003AC0B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC33C572A873981003AC0B3 /* Assets.xcassets */; };
 		AFC33C5B2A873981003AC0B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC33C5A2A873981003AC0B3 /* Preview Assets.xcassets */; };
+		AFC33C622A8739CD003AC0B3 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C612A8739CD003AC0B3 /* Classes.swift */; };
+		AFC33C662A8745DB003AC0B3 /* NoNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C652A8745DB003AC0B3 /* NoNetworkView.swift */; };
+		AFC33C682A874D4D003AC0B3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C672A874D4D003AC0B3 /* MainTabView.swift */; };
+		AFC33C6A2A876341003AC0B3 /* GetInitialTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C692A876341003AC0B3 /* GetInitialTeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		AFC33C552A873981003AC0B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AFC33C572A873981003AC0B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFC33C5A2A873981003AC0B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AFC33C612A8739CD003AC0B3 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		AFC33C652A8745DB003AC0B3 /* NoNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkView.swift; sourceTree = "<group>"; };
+		AFC33C672A874D4D003AC0B3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AFC33C692A876341003AC0B3 /* GetInitialTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInitialTeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,9 @@
 		AFC33C522A873981003AC0B3 /* myHockey Victoria */ = {
 			isa = PBXGroup;
 			children = (
+				AFC33C642A8745A5003AC0B3 /* Scripts */,
+				AFC33C632A874593003AC0B3 /* Views */,
 				AFC33C532A873981003AC0B3 /* myHockey_VictoriaApp.swift */,
-				AFC33C552A873981003AC0B3 /* ContentView.swift */,
 				AFC33C572A873981003AC0B3 /* Assets.xcassets */,
 				AFC33C592A873981003AC0B3 /* Preview Content */,
 			);
@@ -65,6 +74,25 @@
 				AFC33C5A2A873981003AC0B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AFC33C632A874593003AC0B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFC33C552A873981003AC0B3 /* ContentView.swift */,
+				AFC33C652A8745DB003AC0B3 /* NoNetworkView.swift */,
+				AFC33C672A874D4D003AC0B3 /* MainTabView.swift */,
+				AFC33C692A876341003AC0B3 /* GetInitialTeamView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFC33C642A8745A5003AC0B3 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				AFC33C612A8739CD003AC0B3 /* Classes.swift */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC33C662A8745DB003AC0B3 /* NoNetworkView.swift in Sources */,
 				AFC33C562A873981003AC0B3 /* ContentView.swift in Sources */,
 				AFC33C542A873981003AC0B3 /* myHockey_VictoriaApp.swift in Sources */,
+				AFC33C6A2A876341003AC0B3 /* GetInitialTeamView.swift in Sources */,
+				AFC33C622A8739CD003AC0B3 /* Classes.swift in Sources */,
+				AFC33C682A874D4D003AC0B3 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
