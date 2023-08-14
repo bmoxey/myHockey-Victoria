@@ -11,7 +11,7 @@ struct SelectDivisionView: View {
     @State private var selectedCompetition: String = ""
     @State private var newDivisions: [DivisionStruct] = []
     
-    var competitions: [String] {
+    var compList: [String] {
         var uniqueComps: [String] = []
         for division in newDivisions {
             if !uniqueComps.contains(division.compName) {
@@ -28,50 +28,36 @@ struct SelectDivisionView: View {
             return newDivisions.filter { $0.compName == selectedCompetition }
         }
     }
-
+    
     
     var body: some View {
-        Picker("Select Surname", selection: $selectedCompetition) {
-             ForEach(competitions, id: \.self) { competition in
-                 Text(competition).tag(competition)
-             }
-         }
-         .pickerStyle(SegmentedPickerStyle())
-         .padding()
-
         NavigationStack {
             VStack {
-                 
-                 List(filteredDivs) { division in
-                     NavigationLink(
-                         destination: SelectTeamView(division: division), // Navigate to DetailView
-                         label: {
-                             Text("\(division.divisionName)")
-                         }
-                     )
-                 }
-    
+                Picker("Select Surname", selection: $selectedCompetition) {
+                    ForEach(compList, id: \.self) { competition in
+                        Text(competition).tag(competition)
+                    }
+                }
+                .pickerStyle(.segmented)
+                                
+                List(filteredDivs) { division in
+                    NavigationLink(
+                        destination: SelectTeamView(division: division),
+                        label: {
+                            Text("\(division.divisionName)")
+                                .font(.system(size: 14))
+                        }
+                    )
+                    .listStyle(.plain)
+                }
+                
             }
             
-            .scrollContentBackground(.hidden)
             .task {
                 await loadData()
             }
             .navigationTitle("Select Competition")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    VStack {
-                        Text("Select Competition").font(.headline)
-                    }
-                }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Image("fulllogo")
-                        .resizable()
-                        .frame(width: 107, height: 40)
-                }
-            }
-            .toolbarBackground(.visible, for: .navigationBar)
         }
     }
     func loadData() async {
@@ -108,7 +94,7 @@ struct SelectDivisionView: View {
         } catch {
             print("Invalid data")
         }
-
+        
     }
 }
 
