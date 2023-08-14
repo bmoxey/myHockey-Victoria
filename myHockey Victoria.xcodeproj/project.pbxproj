@@ -14,7 +14,11 @@
 		AFC33C622A8739CD003AC0B3 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C612A8739CD003AC0B3 /* Classes.swift */; };
 		AFC33C662A8745DB003AC0B3 /* NoNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C652A8745DB003AC0B3 /* NoNetworkView.swift */; };
 		AFC33C682A874D4D003AC0B3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C672A874D4D003AC0B3 /* MainTabView.swift */; };
-		AFC33C6A2A876341003AC0B3 /* GetInitialTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC33C692A876341003AC0B3 /* GetInitialTeamView.swift */; };
+		AFF4E4742A89979F00398A60 /* SelectDivisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4E4732A89979F00398A60 /* SelectDivisionView.swift */; };
+		AFF4E4762A89988A00398A60 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4E4752A89988A00398A60 /* Extensions.swift */; };
+		AFF4E4782A8998BA00398A60 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4E4772A8998BA00398A60 /* Structs.swift */; };
+		AFF4E47A2A89A50F00398A60 /* SelectTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4E4792A89A50F00398A60 /* SelectTeamView.swift */; };
+		AFF4E47C2A89A8CB00398A60 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4E47B2A89A8CB00398A60 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +30,11 @@
 		AFC33C612A8739CD003AC0B3 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		AFC33C652A8745DB003AC0B3 /* NoNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkView.swift; sourceTree = "<group>"; };
 		AFC33C672A874D4D003AC0B3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		AFC33C692A876341003AC0B3 /* GetInitialTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInitialTeamView.swift; sourceTree = "<group>"; };
+		AFF4E4732A89979F00398A60 /* SelectDivisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDivisionView.swift; sourceTree = "<group>"; };
+		AFF4E4752A89988A00398A60 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AFF4E4772A8998BA00398A60 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		AFF4E4792A89A50F00398A60 /* SelectTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamView.swift; sourceTree = "<group>"; };
+		AFF4E47B2A89A8CB00398A60 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +90,8 @@
 				AFC33C552A873981003AC0B3 /* ContentView.swift */,
 				AFC33C652A8745DB003AC0B3 /* NoNetworkView.swift */,
 				AFC33C672A874D4D003AC0B3 /* MainTabView.swift */,
-				AFC33C692A876341003AC0B3 /* GetInitialTeamView.swift */,
+				AFF4E4732A89979F00398A60 /* SelectDivisionView.swift */,
+				AFF4E4792A89A50F00398A60 /* SelectTeamView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -91,6 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				AFC33C612A8739CD003AC0B3 /* Classes.swift */,
+				AFF4E4752A89988A00398A60 /* Extensions.swift */,
+				AFF4E4772A8998BA00398A60 /* Structs.swift */,
+				AFF4E47B2A89A8CB00398A60 /* Functions.swift */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -165,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF4E4782A8998BA00398A60 /* Structs.swift in Sources */,
 				AFC33C662A8745DB003AC0B3 /* NoNetworkView.swift in Sources */,
 				AFC33C562A873981003AC0B3 /* ContentView.swift in Sources */,
+				AFF4E47C2A89A8CB00398A60 /* Functions.swift in Sources */,
+				AFF4E4742A89979F00398A60 /* SelectDivisionView.swift in Sources */,
+				AFF4E47A2A89A50F00398A60 /* SelectTeamView.swift in Sources */,
+				AFF4E4762A89988A00398A60 /* Extensions.swift in Sources */,
 				AFC33C542A873981003AC0B3 /* myHockey_VictoriaApp.swift in Sources */,
-				AFC33C6A2A876341003AC0B3 /* GetInitialTeamView.swift in Sources */,
 				AFC33C622A8739CD003AC0B3 /* Classes.swift in Sources */,
 				AFC33C682A874D4D003AC0B3 /* MainTabView.swift in Sources */,
 			);
