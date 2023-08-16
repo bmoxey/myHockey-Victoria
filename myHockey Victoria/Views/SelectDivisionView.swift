@@ -45,6 +45,7 @@ struct SelectDivisionView: View {
                         destination: SelectTeamView(division: division),
                         label: {
                             Text("\(division.divisionName)")
+                                .font(.caption)
                         }
                     )
                     .listStyle(.plain)
@@ -75,7 +76,8 @@ struct SelectDivisionView: View {
             for i in 0 ..< line.count {
                 if line[i].contains("https://www.hockeyvictoria.org.au/reports/games/download/") {
                     myCompName = GetPart(fullString: String(line[i-1]), partNumber: 3)
-                    myCompName = ShortCompName(fullName: myCompName)
+                    myCompName = myCompName.replacingOccurrences(of: " Competition", with: "")
+                        .replacingOccurrences(of: " Hockey League RHL", with: "")
                     if newDivisions.isEmpty {
                         selectedCompetition = myCompName
                     }

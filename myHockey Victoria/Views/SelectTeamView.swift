@@ -11,28 +11,30 @@ import SwiftUI
 struct SelectTeamView: View {
     @State private var newTeam: [NewTeamStruct] = []
     @State private var showingConfirmationDialog = false
+    @State private var selectedTeam: NewTeamStruct? = nil
+    
     let division: DivisionStruct
     
     var body: some View {
+        let sortedTeam = newTeam.sorted { $0.teamName < $1.teamName }
         NavigationStack {
             VStack {
                 
-                List(newTeam) { newTeam in
-                    Button(action: {
-                        showingConfirmationDialog = true }) {
-                        Text(newTeam.teamName)
-                            .foregroundColor(.primary)
-                    }
-                    .alert(isPresented: $showingConfirmationDialog) {
+                List(sortedTeam) { team in
+                    Text(team.teamName)
+                        .onTapGesture {
+                            selectedTeam = team
+                            showingConfirmationDialog = true
+                        }
+
+                        .alert(isPresented: $showingConfirmationDialog) {
                         Alert(
                             title: Text("Confirm Selection"),
-                            message: Text("Are you sure ?"),
+                            message: Text("You have selected \n \(selectedTeam?.divisionName ?? "") \n \(selectedTeam?.teamName ?? "") \n Are you sure ?"),
                             primaryButton: .default(Text("Yes")) {
-                                // Perform the action when user confirms
-                                // Your code to proceed with the selection
+                               addTeamToMyArray()
                             },
                             secondaryButton: .cancel(Text("No")) {
-                                // Handle rejection or cancelation
                             }
                         )
                     }
@@ -45,6 +47,11 @@ struct SelectTeamView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
+    
+    func addTeamToMyArray() {
+        
+    }
+    
     
     func loadData() async {
         var myTeamName = ""
